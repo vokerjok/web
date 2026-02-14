@@ -13,3 +13,6 @@ docker run -d \
   -e AUTO_LOG="/data/headless_url.log" \
   -v ~/headless-supervisor/data:/data \
   headless-supervisor:latest
+
+stop run docker
+docker rm -f headless-supervisor
