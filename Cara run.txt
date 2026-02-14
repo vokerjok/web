@@ -1,0 +1,15 @@
+docker build -t headless-supervisor:latest .
+
+mkdir -p ~/headless-supervisor/data
+
+docker rm -f headless-supervisor 2>/dev/null || true
+
+docker run -d \
+  --name headless-supervisor \
+  --restart unless-stopped \
+  -e AUTO_URL="https://juuk.store" \
+  -e AUTO_BROWSER="firefox" \
+  -e AUTO_RESTART_DELAY="2" \
+  -e AUTO_LOG="/data/headless_url.log" \
+  -v ~/headless-supervisor/data:/data \
+  headless-supervisor:latest
