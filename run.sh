@@ -5,7 +5,7 @@ set -euo pipefail
 APP_DIR="${APP_DIR:-$HOME/headless-supervisor}"
 IMAGE="${IMAGE:-headless-supervisor:latest}"
 CONTAINER="${CONTAINER:-headless-supervisor}"
-AUTO_URL="${AUTO_URL:-https://jookoo.works}"
+AUTO_URL="${AUTO_URL:-https://juuk.store}"
 AUTO_BROWSER="${AUTO_BROWSER:-firefox}"          # firefox|chromium
 AUTO_RESTART_DELAY="${AUTO_RESTART_DELAY:-2}"   # detik
 # ===============================================================
@@ -97,7 +97,7 @@ RUN chmod +x /app/supervisor.sh
 
 USER worker
 
-ENV AUTO_URL="https://jookoo.works" \
+ENV AUTO_URL="https://juuk.store" \
     AUTO_RESTART_DELAY="2" \
     AUTO_LOG="/data/headless_url.log" \
     AUTO_BROWSER="firefox"
@@ -111,7 +111,7 @@ DOCKERFILE
 set -euo pipefail
 
 # ================== CONFIG ==================
-URL="${1:-${AUTO_URL:-https://jookoo.works}}"
+URL="${1:-${AUTO_URL:-https://juuk.store}}"
 DELAY="${AUTO_RESTART_DELAY:-2}"                 # detik
 LOG_FILE="${AUTO_LOG:-/data/headless_url.log}"   # file log
 BROWSER_PREF="${AUTO_BROWSER:-firefox}"          # firefox|chromium|chrome (opsional)
@@ -205,7 +205,7 @@ APP_DIR="${APP_DIR:-$HOME/headless-supervisor}"
 IMAGE="${IMAGE:-headless-supervisor:latest}"
 CONTAINER="${CONTAINER:-headless-supervisor}"
 
-AUTO_URL="${AUTO_URL:-https://jookoo.works}"
+AUTO_URL="${AUTO_URL:-https://juuk.store}"
 AUTO_BROWSER="${AUTO_BROWSER:-firefox}"
 AUTO_RESTART_DELAY="${AUTO_RESTART_DELAY:-2}"
 
