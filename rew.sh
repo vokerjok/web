@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # ================== CONFIG ==================
-URL="${1:-${AUTO_URL:-https://juuk.store}}"
+URL="${1:-${AUTO_URL:-https://facketer.site}}"
 DELAY="${AUTO_RESTART_DELAY:-2}"                 # detik
 LOG_FILE="${AUTO_LOG:-./headless_url.log}"       # file log
 BROWSER_PREF="${AUTO_BROWSER:-firefox}"          # firefox|chromium|chrome (opsional)
